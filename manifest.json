@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "amazon-previewer",
+  "version": "1.0",
+
+  "description": "Display an article's preview of hovered item.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "*://*.amazon.fr/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.amazon.fr/*"],
+      "js": ["js/popper.min.js", "js/tippy-bundle.umd.min.js", "amazon-previewer.js"]
+    }
+  ]
+
+}
